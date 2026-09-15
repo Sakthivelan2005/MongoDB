@@ -1,7 +1,7 @@
 # MongoDB
 
-- MongoDB is a source-available Cross-platform, document-oriented Database program classified as a NoSQL Database.
-- Instead of using talbles with rigid rows and c like traditional Relational Databases, MongoDB stores data in highly fliexible, JSON like Documents called BSON (Binary JSON).
+MongoDB is a source-available Cross-platform, document-oriented Database program classified as a NoSQL Database.
+Instead of using talbles with rigid rows and c like traditional Relational Databases, MongoDB stores data in highly fliexible, JSON like Documents called BSON (Binary JSON).
 
 ## SQL VS NoSQL
 
@@ -16,38 +16,95 @@
 
 ## Syntax: 
 1. To display all the availble databases.
-```mongosh
+```javascript
 show dbs
 ```
 (OR)
 
-```mongosh
+```javascript
 show databases
 ```
 
 2. To use particular Database
 - Syntax
-```mongosh
-use <dbs-Name>
+```javascript
+use <database_Name>
 ```
 
 -Example:
-```mongosh
+```javascript
 use userdb
 ```
 
-3. To display available collections (like Tables in SQL)
-```mongosh
+3. To display available collections (like ***Table*** in SQL)
+```javascript
 show collections
 ```
 
 4. To display all the data in a table.
 -  Basic Syntax:
-```mongosh
-db.<collection-name>.find()
+```javascript
+db.<collection_name>.find()
 ```
 - Example:
-```mongosh
+```javascript
 db.inventory.find()
 ```
 
+5. To create a database: 
+-  Basic Syntax:
+```javascript
+use <database_name>
+```
+- Example:
+```javascript
+use college
+```
+
+6. To create a collection (like ***Table*** in SQL):
+-  Basic Syntax:
+```javascript
+db.createCollection(<collection_name>)
+```
+- Example:
+```javascript
+db.createCollection("admin")
+```
+
+7. To delete the collection:
+-  Basic Syntax:
+```javascript
+db.<collection_name>.drop();
+```
+- Example:
+```javascript
+db.admin.drop();
+```
+
+8. To retrieve  Particular data with particular value from collection
+-  Basic Syntax:
+```javascript
+db.<collection_name>.find(<Query>, <projection>)
+```
+
+**Query** - If the value is match that particular whole data will get as output.
+
+**Projection** - What are the values we need from that whole data retrieved in the Query will give as output. 
+
+Example:
+```javascript
+db.inventory.find({item: "pen"}, {quantity: 1, _id: False})
+
+// Here, {quantity: 1} represent true value. We can say it true or 1
+// Then in projection if we projection any key vale the _ObjectID: will display by default. That why I put _id: false or we say 0.
+```
+
+9. To insert a value into a collection.
+-  Basic Syntax:
+```javascript
+db.<collection_name>.insertOne(<data>)
+```
+- Example:
+```javascript
+db.inventory.insertOne({name: "Sakthi"})
+```
