@@ -1,0 +1,55 @@
+Connected
+Insert:  {
+  acknowledged: true,
+  insertedId: new ObjectId('6aa9257c7d7549430292e02e')
+}
+Data:  [
+  {
+    _id: new ObjectId('6aa923d67bb5eb4d358723bc'),
+    name: 'Sakthi',
+    Age: 21,
+    course: 'BCA'
+  },
+  {
+    _id: new ObjectId('6aa923eeec214dfaadb7f51d'),
+    name: 'Sakthi',
+    Age: 21,
+    course: 'BCA'
+  },
+  {
+    _id: new ObjectId('6aa9248b657ba63a9b71855f'),
+    name: 'Sakthi',
+    Age: 21,
+    course: 'BCA'
+  },
+  {
+    _id: new ObjectId('6aa924c2773276583571114d'),
+    name: 'Sakthi',
+    Age: 21,
+    course: 'BCA'
+  },
+  {
+    _id: new ObjectId('6aa924e4a606e3eddfe3aa4b'),
+    name: 'Sakthi',
+    Age: 21,
+    course: 'BCA'
+  },
+  {
+    _id: new ObjectId('6aa925187d79101c53ce718e'),
+    name: 'Sakthi',
+    Age: 21,
+    course: 'BCA'
+  },
+  {
+    _id: new ObjectId('6aa9254b8b603638f023311b'),
+    name: 'Sakthi',
+    Age: 21,
+    course: 'BCA'
+  },
+  {
+    _id: new ObjectId('6aa9257c7d7549430292e02e'),
+    name: 'Sakthi',
+    Age: 21,
+    course: 'BCA'
+  }
+]

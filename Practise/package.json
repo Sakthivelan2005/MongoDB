@@ -1,0 +1,15 @@
+{
+  "name": "mongodb",
+  "version": "1.0.0",
+  "description": "MongoDB is a source-available Cross-platform, document-oriented Database program classified as a NoSQL Database.\r Instead of using talbles with rigid rows and c like traditional Relational Databases, MongoDB stores data in highly fliexible, JSON like Documents called BSON (Binary JSON).",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "mongoServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "mongodb": "^7.6.0"
+  }
+}
