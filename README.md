@@ -99,6 +99,15 @@ db.inventory.find({item: "pen"}, {quantity: 1, _id: False})
 // Then in projection if we projection any key vale the _ObjectID: will display by default. That why I put _id: false or we say 0.
 ```
 
+-  Basic Syntax:
+```javascript
+db.<collection_name>.findOne(<condition>)
+```
+- Example:
+```javascript
+db.inventory.findOne({name: "Sakthi"})
+```
+
 9. To insert a value into a collection.
 -  Basic Syntax:
 ```javascript
@@ -107,4 +116,114 @@ db.<collection_name>.insertOne(<data>)
 - Example:
 ```javascript
 db.inventory.insertOne({name: "Sakthi"})
+```
+
+10. To insert many values into a collection.
+-  Basic Syntax:
+```javascript
+db.<collection_name>.insertMany(<data>)
+```
+- Example:
+```javascript
+db.inventory.insertMany({name: "Sakthi"})
+```
+
+
+# MongoDB Query Operators
+
+## `I` comparison operators
+
+1. ### `$gt`
+- **Input Type:** `{}` Object
+```json
+{ "price": { "$gt": 100 } }
+```
+
+2. ### `$gte`
+- **Input Type:** `{}` Object
+```json
+{ "price": { "$gte": 100 } }
+```
+
+3. ### `$lt`
+- **Input Type:** `{}` Object
+```json
+{ "price": { "$lt": 500 } }
+```
+
+4. ### `$lte`
+- **Input Type:** `{}` Object
+```json
+{ "price": { "$lte": 500 } }
+```
+
+5. ### `$eq`
+- **Input Type:** `{}` Object
+```json
+{ "status": { "$eq": "active" } }
+```
+
+6. ### `$ne`
+- **Input Type:** `{}` Object
+```json
+{ "status": { "$ne": "archived" } }
+```
+
+---
+
+## `II` Element Operators
+
+1. ### `$exists`
+- **Input Type:** `{}` Object
+```json
+{ "brand": { "$exists": true } }
+```
+
+2. ### `$type`
+- **Input Type:** `{}` Object
+```json
+{ "price": { "$type": "number" } }
+```
+
+---
+
+## `III` Logical Operators
+
+1. ### `$and`
+- **Input Type:** `[]` Array
+```json
+{ 
+    "$and": [
+        { "price": { "$gt": 100 } },
+        { "status": "active" } 
+    ]
+ }
+```
+
+2. ### `$or`
+- **Input Type:** `[]` Array
+```json
+{
+    "$or": [ 
+        { "category": "electronics" }, 
+        { "status": "active" }
+    ] 
+}
+```
+
+3. ### `$nor`
+- **Input Type:** `[]` Array
+```json
+{ 
+    "$nor": [ 
+        { "price": { "$gt": 100 } }, 
+        { "status": "inactive" }
+    ] 
+}
+```
+
+4. ### `$not`
+- **Input Type:** `{}` Object
+```json
+{ "price": { "$not": { "$gt": 100 } } }
 ```
