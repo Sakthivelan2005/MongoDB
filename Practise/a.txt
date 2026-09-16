@@ -1,55 +1,403 @@
 Connected
-Insert:  {
-  acknowledged: true,
-  insertedId: new ObjectId('6aa9257c7d7549430292e02e')
-}
-Data:  [
+greater Than 20:  [
   {
-    _id: new ObjectId('6aa923d67bb5eb4d358723bc'),
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf4'),
     name: 'Sakthi',
     Age: 21,
     course: 'BCA'
   },
   {
-    _id: new ObjectId('6aa923eeec214dfaadb7f51d'),
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf6'),
+    name: 'Rahul',
+    Age: 22,
+    course: 'MCA'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf7'),
+    name: 'Divya',
+    Age: 21,
+    course: 'BCA'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf8'),
+    name: 'Karthik',
+    Age: 23,
+    course: 'BTech'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bfa'),
+    name: 'Vijay',
+    Age: 22,
+    course: 'BCom'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bfb'),
+    name: 'Sneha',
+    Age: 21,
+    course: 'BCA'
+  }
+]
+greater Than or equal to 20:  [
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf4'),
     name: 'Sakthi',
     Age: 21,
     course: 'BCA'
   },
   {
-    _id: new ObjectId('6aa9248b657ba63a9b71855f'),
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf5'),
+    name: 'Priya',
+    Age: 20,
+    course: 'BSc'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf6'),
+    name: 'Rahul',
+    Age: 22,
+    course: 'MCA'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf7'),
+    name: 'Divya',
+    Age: 21,
+    course: 'BCA'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf8'),
+    name: 'Karthik',
+    Age: 23,
+    course: 'BTech'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf9'),
+    name: 'Ananya',
+    Age: 20,
+    course: 'BCA'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bfa'),
+    name: 'Vijay',
+    Age: 22,
+    course: 'BCom'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bfb'),
+    name: 'Sneha',
+    Age: 21,
+    course: 'BCA'
+  }
+]
+less Than 22:  [
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf4'),
     name: 'Sakthi',
     Age: 21,
     course: 'BCA'
   },
   {
-    _id: new ObjectId('6aa924c2773276583571114d'),
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf5'),
+    name: 'Priya',
+    Age: 20,
+    course: 'BSc'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf7'),
+    name: 'Divya',
+    Age: 21,
+    course: 'BCA'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf9'),
+    name: 'Ananya',
+    Age: 20,
+    course: 'BCA'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bfb'),
+    name: 'Sneha',
+    Age: 21,
+    course: 'BCA'
+  }
+]
+less Than or equal to 21:  [
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf4'),
     name: 'Sakthi',
     Age: 21,
     course: 'BCA'
   },
   {
-    _id: new ObjectId('6aa924e4a606e3eddfe3aa4b'),
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf5'),
+    name: 'Priya',
+    Age: 20,
+    course: 'BSc'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf7'),
+    name: 'Divya',
+    Age: 21,
+    course: 'BCA'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf9'),
+    name: 'Ananya',
+    Age: 20,
+    course: 'BCA'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bfb'),
+    name: 'Sneha',
+    Age: 21,
+    course: 'BCA'
+  }
+]
+Equal to 20:   [
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf5'),
+    name: 'Priya',
+    Age: 20,
+    course: 'BSc'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf9'),
+    name: 'Ananya',
+    Age: 20,
+    course: 'BCA'
+  }
+]
+Not Equal to 20:  [
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf4'),
     name: 'Sakthi',
     Age: 21,
     course: 'BCA'
   },
   {
-    _id: new ObjectId('6aa925187d79101c53ce718e'),
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf6'),
+    name: 'Rahul',
+    Age: 22,
+    course: 'MCA'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf7'),
+    name: 'Divya',
+    Age: 21,
+    course: 'BCA'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf8'),
+    name: 'Karthik',
+    Age: 23,
+    course: 'BTech'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bfa'),
+    name: 'Vijay',
+    Age: 22,
+    course: 'BCom'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bfb'),
+    name: 'Sneha',
+    Age: 21,
+    course: 'BCA'
+  }
+]
+Exisits 'Age':  [
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf4'),
     name: 'Sakthi',
     Age: 21,
     course: 'BCA'
   },
   {
-    _id: new ObjectId('6aa9254b8b603638f023311b'),
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf5'),
+    name: 'Priya',
+    Age: 20,
+    course: 'BSc'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf6'),
+    name: 'Rahul',
+    Age: 22,
+    course: 'MCA'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf7'),
+    name: 'Divya',
+    Age: 21,
+    course: 'BCA'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf8'),
+    name: 'Karthik',
+    Age: 23,
+    course: 'BTech'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf9'),
+    name: 'Ananya',
+    Age: 20,
+    course: 'BCA'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bfa'),
+    name: 'Vijay',
+    Age: 22,
+    course: 'BCom'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bfb'),
+    name: 'Sneha',
+    Age: 21,
+    course: 'BCA'
+  }
+]
+Type Number:  [
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf4'),
     name: 'Sakthi',
     Age: 21,
     course: 'BCA'
   },
   {
-    _id: new ObjectId('6aa9257c7d7549430292e02e'),
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf5'),
+    name: 'Priya',
+    Age: 20,
+    course: 'BSc'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf6'),
+    name: 'Rahul',
+    Age: 22,
+    course: 'MCA'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf7'),
+    name: 'Divya',
+    Age: 21,
+    course: 'BCA'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf8'),
+    name: 'Karthik',
+    Age: 23,
+    course: 'BTech'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf9'),
+    name: 'Ananya',
+    Age: 20,
+    course: 'BCA'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bfa'),
+    name: 'Vijay',
+    Age: 22,
+    course: 'BCom'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bfb'),
+    name: 'Sneha',
+    Age: 21,
+    course: 'BCA'
+  }
+]
+And:  [
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf4'),
     name: 'Sakthi',
     Age: 21,
     course: 'BCA'
+  }
+]
+OR:  [
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf4'),
+    name: 'Sakthi',
+    Age: 21,
+    course: 'BCA'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf5'),
+    name: 'Priya',
+    Age: 20,
+    course: 'BSc'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf6'),
+    name: 'Rahul',
+    Age: 22,
+    course: 'MCA'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf7'),
+    name: 'Divya',
+    Age: 21,
+    course: 'BCA'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf8'),
+    name: 'Karthik',
+    Age: 23,
+    course: 'BTech'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf9'),
+    name: 'Ananya',
+    Age: 20,
+    course: 'BCA'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bfa'),
+    name: 'Vijay',
+    Age: 22,
+    course: 'BCom'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bfb'),
+    name: 'Sneha',
+    Age: 21,
+    course: 'BCA'
+  }
+]
+nor:  [
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf6'),
+    name: 'Rahul',
+    Age: 22,
+    course: 'MCA'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf8'),
+    name: 'Karthik',
+    Age: 23,
+    course: 'BTech'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bfa'),
+    name: 'Vijay',
+    Age: 22,
+    course: 'BCom'
+  }
+]
+not:  [
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf6'),
+    name: 'Rahul',
+    Age: 22,
+    course: 'MCA'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bf8'),
+    name: 'Karthik',
+    Age: 23,
+    course: 'BTech'
+  },
+  {
+    _id: new ObjectId('6aaac0133f0f55f02a8d1bfa'),
+    name: 'Vijay',
+    Age: 22,
+    course: 'BCom'
   }
 ]
