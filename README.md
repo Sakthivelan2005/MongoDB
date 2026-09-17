@@ -231,14 +231,13 @@ db.inventory.insertMany({name: "Sakthi"})
 # UPDATE Queries
 
 **1. $set**
-- Replaces the value of a field or creates it if missing.
+- Replaces the value of a field or creates it if it is missing.
 
 ```javascript
-db.users.updateOne({ _id: 1 }, { $set: { status: "active" } });
+await products.updateOne({ item: "pen" }, { $set: { price: 15 } });
 
-// Output
-// Before: { _id: 1 }
-// After:  { _id: 1, status: "active" }
+// Before: { item: "pen" }
+// After:  { item: "pen", price: 15 }
 
 ```
 
@@ -246,158 +245,168 @@ db.users.updateOne({ _id: 1 }, { $set: { status: "active" } });
 - Increases a number. 
 
 ```javascript
-db.users.updateOne({ _id: 1 }, { $inc: { score: 20 } });
+await products.updateOne({ item: "pen" }, { $inc: { qty: 20 } });
 
-// Output
-// Before: { _id: 1, score: 30 }
-// After:  { _id: 1, score: 50 }
-
-```
-- Decreases a number.
-
-```javascript
-db.users.updateOne({ _id: 1 }, { $inc: { score: -10 } });
-
-// Output
-// Before: { _id: 1, score: 50 }
-// After:  { _id: 1, score: 40 }
+// Before: { item: "pen", qty: 30 }
+// After:  { item: "pen", qty: 50 }
 
 ```
 
-**3. $min**
-- Updates the field **only** if the new value is lower than the current value.
+- Decreases a number. 
 
 ```javascript
-db.users.updateOne({ _id: 1 }, { $min: { score: 45 } });
+await products.updateOne({ item: "pen" }, { $inc: { qty: 10 } });
 
-// Output
-// Before: { _id: 1, score: 50 }
-// After:  { _id: 1, score: 45 } 
+// Before: { item: "pen", qty: 50 }
+// After:  { item: "pen", qty: 40 }
 
 ```
 
-**4. $max**
-- Updates the field **only** if the new value is higher than the current value.
+**3. $mul**
+- Multiplies a number by a specific value.
 
 ```javascript
-db.users.updateOne({ _id: 1 }, { $max: { score: 90 } });
+await products.updateOne({ item: "notebook" }, { $mul: { price: 2 } });
 
-// Output
-// Before: { _id: 1, score: 50 }
-// After:  { _id: 1, score: 90 }
+// Before: { item: "notebook", price: 10 }
+// After:  { item: "notebook", price: 20 }
 
 ```
 
-**5. $unset**
-- Completely deletes the key and its value from the document.
+**4. $min**
+- Updates the field **only** if the new value is smaller than the current value.
 
 ```javascript
-db.users.updateOne({ _id: 1 }, { $unset: { tempKey: "" } });
+await products.updateOne({ item: "mouse" }, { $min: { price: 600 } });
 
-// Output
-// Before: { _id: 1, tempKey: "junk_data" }
-// After:  { _id: 1 }
+// Before: { item: "mouse", price: 800 }
+// After:  { item: "mouse", price: 600 }
 
 ```
 
-**6. $rename**
-- Changes the field name itself, keeping the existing data intact.
+**5. $max**
+- Updates the field **only** if the new value is greater than the current value.
 
 ```javascript
-db.users.updateOne({ _id: 1 }, { $rename: { oldKey: "newKey" } });
+await products.updateOne({ item: "mouse" }, { $max: { price: 900 } });
 
-// Output
-// Before: { _id: 1, oldKey: "data" }
-// After:  { _id: 1, newKey: "data" }
+// Before: { item: "mouse", price: 800 }
+// After:  { item: "mouse", price: 900 }
 
 ```
 
-**7. $currentDate**
-- Sets the field to the current ISODate timestamp.
+**6. $unset**
+- Completely removes a field and its value from the document.
 
 ```javascript
-db.users.updateOne({ _id: 1 }, { $currentDate: { updatedAt: true } });
+await products.updateOne({ item: "pen" }, { $unset: { category: "" } });
 
-// Output
-// Before: { _id: 1 }
-// After:  { _id: 1, updatedAt: ISODate("2026-09-18T03:00:04.000Z") }
+// Before: { item: "pen", category: "stationery" }
+// After:  { item: "pen" }
 
 ```
 
-**8. $push**
-- Adds an item to the end of an array. **Blindly allows duplicates.**
+**7. $rename**
+- Changes the name of the field itself. The data stays the same.
 
 ```javascript
-db.users.updateOne({ _id: 1 }, { $push: { tags: "react" } });
+await products.updateOne({ item: "pencil" }, { $rename: { qty: "quantity" } });
 
-// Output
-// Before: { _id: 1, tags: ["react"] }
-// After:  { _id: 1, tags: ["react", "react"] }
+// Before: { item: "pencil", qty: 10 }
+// After:  { item: "pencil", quantity: 10 }
 
 ```
 
-**9. $addToSet**
-- Adds an item to an array **only** if it doesn't already exist. Prevents duplicates.
+**8. $currentDate**
+- Sets the field to the exact current date and time.
 
 ```javascript
-db.users.updateOne({ _id: 1 }, { $addToSet: { tags: "react" } });
+await products.updateOne({ item: "laptop" }, { $currentDate: { updatedAt: true } });
 
-// Output
-// Before: { _id: 1, tags: ["react"] }
-// After:  { _id: 1, tags: ["react"] } 
+// Before: { item: "laptop" }
+// After:  { item: "laptop", updatedAt: ISODate("2026-09-18T03:20:00.000Z") }
 
 ```
 
-**10. $each**
-- Used inside `$push` or `$addToSet` to apply the operation to multiple items at once.
+**9. $push**
+- Adds an item to the end of an array. **Duplicates are allowed.**
 
 ```javascript
-db.users.updateOne({ _id: 1 }, { 
-  $push: { tags: { $each: ["node", "mongo"] } } 
+await products.updateOne({ item: "pen" }, { $push: { tags: "writing" } });
+
+// Before: { item: "pen", tags: ["writing"] }
+// After:  { item: "pen", tags: ["writing", "writing"] }
+
+```
+
+**10. $addToSet**
+- Adds an item to an array **only** if it is not already there. **No duplicates.**
+
+```javascript
+await products.updateOne({ item: "pen" }, { $addToSet: { tags: "school" } });
+
+// Before: { item: "pen", tags: ["school"] }
+// After:  { item: "pen", tags: ["school"] }
+
+```
+
+**11. $each**
+- Used inside `$push` or `$addToSet` to add multiple items at the same time.
+
+```javascript
+await products.updateOne({ item: "pen" }, { 
+  $addToSet: { tags: { $each: ["office", "new"] } } 
 });
 
-// Output
-// Before: { _id: 1, tags: ["react"] }
-// After:  { _id: 1, tags: ["react", "node", "mongo"] }
+// Before: { item: "pen", tags: ["school"] }
+// After:  { item: "pen", tags: ["school", "office", "new"] }
 
 ```
 
-**11. $pull**
-- Removes **all** instances of a specific value from an array.
+**12. $pop**
+- Removes the first or last item from an array. `1` removes the last item. `-1` removes the first item.
 
 ```javascript
-db.users.updateOne({ _id: 1 }, { $pull: { tags: "bug" } });
+await products.updateOne({ item: "pen" }, { $pop: { tags: -1 } });
 
-// Output
-// Before: { _id: 1, tags: ["bug", "react", "bug"] }
-// After:  { _id: 1, tags: ["react"] }
+// Before: { item: "pen", tags: ["school", "office", "new"] }
+// After:  { item: "pen", tags: ["office", "new"] }
 
 ```
 
-**12. $pullAll**
-- Removes multiple exact values from an array in one single command.
+**13. $pull**
+- Removes **all** items in an array that match a specific value.
 
 ```javascript
-db.users.updateOne({ _id: 1 }, { $pullAll: { tags: ["bug", "error"] } });
+await products.updateOne({ item: "notebook" }, { $pull: { tags: "paper" } });
 
-// Output
-// Before: { _id: 1, tags: ["bug", "react", "error"] }
-// After:  { _id: 1, tags: ["react"] }
+// Before: { item: "notebook", tags: ["paper", "school", "paper"] }
+// After:  { item: "notebook", tags: ["school"] }
 
 ```
 
-**13. upsert: true**
-- An option object (3rd parameter). If it doesn't find the document matching the search query, it builds a new one using the query and the update fields.
+**14. $pullAll**
+- Removes multiple specific values from an array in one single step.
 
 ```javascript
-db.users.updateOne(
-  { email: "new@user.com" }, 
-  { $set: { role: "admin" } }, 
+await products.updateOne({ item: "laptop" }, { $pullAll: { tags: ["computer", "office"] } });
+
+// Before: { item: "laptop", tags: ["computer", "gaming", "office"] }
+// After:  { item: "laptop", tags: ["gaming"] }
+
+```
+
+**15. upsert: true**
+- This is an option, not an operator. If the database does not find the item, it builds a brand new one using your search and update data.
+
+```javascript
+await products.updateOne(
+  { item: "marker" }, 
+  { $set: { price: 20 } }, 
   { upsert: true }
 );
 
-// Output
-// Before: Document doesn't exist in the database
-// After:  { _id: ObjectId("..."), email: "new@user.com", role: "admin" }
+// Before: No "marker" item exists in the database.
+// After:  { _id: ObjectId("..."), item: "marker", price: 20 }
 
 ```
