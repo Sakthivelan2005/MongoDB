@@ -295,17 +295,6 @@ await products.updateOne({ item: "mouse" }, { $max: { price: 900 } });
 
 ```
 
-**6. $unset**
-- Completely removes a field and its value from the document.
-
-```javascript
-await products.updateOne({ item: "pen" }, { $unset: { category: "" } });
-
-// Before: { item: "pen", category: "stationery" }
-// After:  { item: "pen" }
-
-```
-
 **7. $rename**
 - Changes the name of the field itself. The data stays the same.
 
@@ -325,17 +314,6 @@ await products.updateOne({ item: "laptop" }, { $currentDate: { updatedAt: true }
 
 // Before: { item: "laptop" }
 // After:  { item: "laptop", updatedAt: ISODate("2026-09-18T03:20:00.000Z") }
-
-```
-
-**9. $push**
-- Adds an item to the end of an array. **Duplicates are allowed.**
-
-```javascript
-await products.updateOne({ item: "pen" }, { $push: { tags: "writing" } });
-
-// Before: { item: "pen", tags: ["writing"] }
-// After:  { item: "pen", tags: ["writing", "writing"] }
 
 ```
 
@@ -360,6 +338,17 @@ await products.updateOne({ item: "pen" }, {
 
 // Before: { item: "pen", tags: ["school"] }
 // After:  { item: "pen", tags: ["school", "office", "new"] }
+
+```
+
+**9. $push**
+- Adds an item to the end of an array. **Duplicates are allowed.**
+
+```javascript
+await products.updateOne({ item: "pen" }, { $push: { tags: "writing" } });
+
+// Before: { item: "pen", tags: ["writing"] }
+// After:  { item: "pen", tags: ["writing", "writing"] }
 
 ```
 
@@ -393,6 +382,17 @@ await products.updateOne({ item: "laptop" }, { $pullAll: { tags: ["computer", "o
 
 // Before: { item: "laptop", tags: ["computer", "gaming", "office"] }
 // After:  { item: "laptop", tags: ["gaming"] }
+
+```
+
+**6. $unset**
+- Completely removes a field and its value from the document.
+
+```javascript
+await products.updateOne({ item: "pen" }, { $unset: { category: "" } });
+
+// Before: { item: "pen", category: "stationery" }
+// After:  { item: "pen" }
 
 ```
 
