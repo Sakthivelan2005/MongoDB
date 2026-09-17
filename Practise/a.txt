@@ -1,403 +1,125 @@
-Connected
-greater Than 20:  [
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf4'),
-    name: 'Sakthi',
-    Age: 21,
-    course: 'BCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf6'),
-    name: 'Rahul',
-    Age: 22,
-    course: 'MCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf7'),
-    name: 'Divya',
-    Age: 21,
-    course: 'BCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf8'),
-    name: 'Karthik',
-    Age: 23,
-    course: 'BTech'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bfa'),
-    name: 'Vijay',
-    Age: 22,
-    course: 'BCom'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bfb'),
-    name: 'Sneha',
-    Age: 21,
-    course: 'BCA'
+Connected..!
+Deleted collection:  true
+Test data inserted successfully:  {
+  acknowledged: true,
+  insertedCount: 5,
+  insertedIds: {
+    '0': new ObjectId('6aac77fb067cce6c2d19bfb7'),
+    '1': new ObjectId('6aac77fb067cce6c2d19bfb8'),
+    '2': new ObjectId('6aac77fb067cce6c2d19bfb9'),
+    '3': new ObjectId('6aac77fb067cce6c2d19bfba'),
+    '4': new ObjectId('6aac77fb067cce6c2d19bfbb')
   }
-]
-greater Than or equal to 20:  [
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf4'),
-    name: 'Sakthi',
-    Age: 21,
-    course: 'BCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf5'),
-    name: 'Priya',
-    Age: 20,
-    course: 'BSc'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf6'),
-    name: 'Rahul',
-    Age: 22,
-    course: 'MCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf7'),
-    name: 'Divya',
-    Age: 21,
-    course: 'BCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf8'),
-    name: 'Karthik',
-    Age: 23,
-    course: 'BTech'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf9'),
-    name: 'Ananya',
-    Age: 20,
-    course: 'BCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bfa'),
-    name: 'Vijay',
-    Age: 22,
-    course: 'BCom'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bfb'),
-    name: 'Sneha',
-    Age: 21,
-    course: 'BCA'
-  }
-]
-less Than 22:  [
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf4'),
-    name: 'Sakthi',
-    Age: 21,
-    course: 'BCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf5'),
-    name: 'Priya',
-    Age: 20,
-    course: 'BSc'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf7'),
-    name: 'Divya',
-    Age: 21,
-    course: 'BCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf9'),
-    name: 'Ananya',
-    Age: 20,
-    course: 'BCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bfb'),
-    name: 'Sneha',
-    Age: 21,
-    course: 'BCA'
-  }
-]
-less Than or equal to 21:  [
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf4'),
-    name: 'Sakthi',
-    Age: 21,
-    course: 'BCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf5'),
-    name: 'Priya',
-    Age: 20,
-    course: 'BSc'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf7'),
-    name: 'Divya',
-    Age: 21,
-    course: 'BCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf9'),
-    name: 'Ananya',
-    Age: 20,
-    course: 'BCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bfb'),
-    name: 'Sneha',
-    Age: 21,
-    course: 'BCA'
-  }
-]
-Equal to 20:   [
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf5'),
-    name: 'Priya',
-    Age: 20,
-    course: 'BSc'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf9'),
-    name: 'Ananya',
-    Age: 20,
-    course: 'BCA'
-  }
-]
-Not Equal to 20:  [
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf4'),
-    name: 'Sakthi',
-    Age: 21,
-    course: 'BCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf6'),
-    name: 'Rahul',
-    Age: 22,
-    course: 'MCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf7'),
-    name: 'Divya',
-    Age: 21,
-    course: 'BCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf8'),
-    name: 'Karthik',
-    Age: 23,
-    course: 'BTech'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bfa'),
-    name: 'Vijay',
-    Age: 22,
-    course: 'BCom'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bfb'),
-    name: 'Sneha',
-    Age: 21,
-    course: 'BCA'
-  }
-]
-Exisits 'Age':  [
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf4'),
-    name: 'Sakthi',
-    Age: 21,
-    course: 'BCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf5'),
-    name: 'Priya',
-    Age: 20,
-    course: 'BSc'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf6'),
-    name: 'Rahul',
-    Age: 22,
-    course: 'MCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf7'),
-    name: 'Divya',
-    Age: 21,
-    course: 'BCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf8'),
-    name: 'Karthik',
-    Age: 23,
-    course: 'BTech'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf9'),
-    name: 'Ananya',
-    Age: 20,
-    course: 'BCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bfa'),
-    name: 'Vijay',
-    Age: 22,
-    course: 'BCom'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bfb'),
-    name: 'Sneha',
-    Age: 21,
-    course: 'BCA'
-  }
-]
-Type Number:  [
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf4'),
-    name: 'Sakthi',
-    Age: 21,
-    course: 'BCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf5'),
-    name: 'Priya',
-    Age: 20,
-    course: 'BSc'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf6'),
-    name: 'Rahul',
-    Age: 22,
-    course: 'MCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf7'),
-    name: 'Divya',
-    Age: 21,
-    course: 'BCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf8'),
-    name: 'Karthik',
-    Age: 23,
-    course: 'BTech'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf9'),
-    name: 'Ananya',
-    Age: 20,
-    course: 'BCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bfa'),
-    name: 'Vijay',
-    Age: 22,
-    course: 'BCom'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bfb'),
-    name: 'Sneha',
-    Age: 21,
-    course: 'BCA'
-  }
-]
-And:  [
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf4'),
-    name: 'Sakthi',
-    Age: 21,
-    course: 'BCA'
-  }
-]
-OR:  [
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf4'),
-    name: 'Sakthi',
-    Age: 21,
-    course: 'BCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf5'),
-    name: 'Priya',
-    Age: 20,
-    course: 'BSc'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf6'),
-    name: 'Rahul',
-    Age: 22,
-    course: 'MCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf7'),
-    name: 'Divya',
-    Age: 21,
-    course: 'BCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf8'),
-    name: 'Karthik',
-    Age: 23,
-    course: 'BTech'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf9'),
-    name: 'Ananya',
-    Age: 20,
-    course: 'BCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bfa'),
-    name: 'Vijay',
-    Age: 22,
-    course: 'BCom'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bfb'),
-    name: 'Sneha',
-    Age: 21,
-    course: 'BCA'
-  }
-]
-nor:  [
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf6'),
-    name: 'Rahul',
-    Age: 22,
-    course: 'MCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf8'),
-    name: 'Karthik',
-    Age: 23,
-    course: 'BTech'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bfa'),
-    name: 'Vijay',
-    Age: 22,
-    course: 'BCom'
-  }
-]
-not:  [
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf6'),
-    name: 'Rahul',
-    Age: 22,
-    course: 'MCA'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bf8'),
-    name: 'Karthik',
-    Age: 23,
-    course: 'BTech'
-  },
-  {
-    _id: new ObjectId('6aaac0133f0f55f02a8d1bfa'),
-    name: 'Vijay',
-    Age: 22,
-    course: 'BCom'
-  }
-]
+}
+Set category from 'stationary' To 'Writting Accessories':  {
+  acknowledged: true,
+  modifiedCount: 1,
+  upsertedId: null,
+  upsertedCount: 0,
+  matchedCount: 1
+}
+Increased Age by 1':  {
+  acknowledged: true,
+  modifiedCount: 1,
+  upsertedId: null,
+  upsertedCount: 0,
+  matchedCount: 1
+}
+Decreased Age by 1':  {
+  acknowledged: true,
+  modifiedCount: 1,
+  upsertedId: null,
+  upsertedCount: 0,
+  matchedCount: 1
+}
+Notebook price increase by X10:  {
+  acknowledged: true,
+  modifiedCount: 1,
+  upsertedId: null,
+  upsertedCount: 0,
+  matchedCount: 1
+}
+Minimum Price of pen should be 15:  {
+  acknowledged: true,
+  modifiedCount: 1,
+  upsertedId: null,
+  upsertedCount: 0,
+  matchedCount: 1
+}
+Maximum Price of notebook should be 150:  {
+  acknowledged: true,
+  modifiedCount: 1,
+  upsertedId: null,
+  upsertedCount: 0,
+  matchedCount: 1
+}
+Reanamed 'qty' to 'quantity':  {
+  acknowledged: true,
+  modifiedCount: 1,
+  upsertedId: null,
+  upsertedCount: 0,
+  matchedCount: 1
+}
+Added Current Date:  {
+  acknowledged: true,
+  modifiedCount: 1,
+  upsertedId: null,
+  upsertedCount: 0,
+  matchedCount: 1
+}
+Added 1 item in tags:  {
+  acknowledged: true,
+  modifiedCount: 1,
+  upsertedId: null,
+  upsertedCount: 0,
+  matchedCount: 1
+}
+removed many items from  the pen tags:  {
+  acknowledged: true,
+  modifiedCount: 1,
+  upsertedId: null,
+  upsertedCount: 0,
+  matchedCount: 1
+}
+remove 1 item from tags:  {
+  acknowledged: true,
+  modifiedCount: 1,
+  upsertedId: null,
+  upsertedCount: 0,
+  matchedCount: 1
+}
+remove many item from tags:  {
+  acknowledged: true,
+  modifiedCount: 1,
+  upsertedId: null,
+  upsertedCount: 0,
+  matchedCount: 1
+}
+add many items to Noteook tags:  {
+  acknowledged: true,
+  modifiedCount: 1,
+  upsertedId: null,
+  upsertedCount: 0,
+  matchedCount: 1
+}
+add many items to Noteook tags by checking duplicates:  {
+  acknowledged: true,
+  modifiedCount: 1,
+  upsertedId: null,
+  upsertedCount: 0,
+  matchedCount: 1
+}
+Removed 'category':  {
+  acknowledged: true,
+  modifiedCount: 1,
+  upsertedId: null,
+  upsertedCount: 0,
+  matchedCount: 1
+}
+Added unknown data:  {
+  acknowledged: true,
+  modifiedCount: 0,
+  upsertedId: new ObjectId('6aac77fb677b72f6275abb19'),
+  upsertedCount: 1,
+  matchedCount: 0
+}
